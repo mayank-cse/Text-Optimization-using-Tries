@@ -1,0 +1,41 @@
+Content :
+	Word :
+		content 				: String
+		number 					: Integer
+		address_begin 				: Integer
+		address_end 				: Integer
+
+	Sentence :
+		words 					: Vector of "Word"
+		number 					: Integer
+
+	Fulltext :
+		TRIE_OBJ 				: Trie
+		sentences 				: Vector of "Trie"
+
+--------------------------------------------------------------------------------------------------------
+
+Trie :
+	Alphabet :
+		alphabet 				: Character
+		children 				: Hash-map of <Character -> "Alphabet" Node>
+		is_ending 				: Boolean
+		level 					: Integer
+		addresses 				: Vector of "Word"
+
+		>> moveToChild(Character) 		: "Alphabet" instance
+		>> setEnding()  			: void
+		>> addAddress("Alphabet" instance) 	: void
+
+
+	Trie:
+		head 					: "Alphabet" node containg null character
+		
+		>> add(string, "Word") 			: void
+		>> findLocations(string) 		: tuple( boolean , int, "Alphabet" instance)
+		>> getAutoCompleteSuggestions(string) 	: Vector < string >
+
+--------------------------------------------------------------------------------------------------------
+
+
+**  words in ""(quotes) represent classes
