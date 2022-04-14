@@ -1,0 +1,6 @@
+Search a word :
+https://stackoverflow.com/questions/52119287/style-single-words-inside-textinput-widget
+
+Widget to focus on :
+https://kivy.org/doc/stable/api-kivy.uix.textinput.html#module-kivy.uix.textinput
+https://kivy.org/doc/stable/api-kivy.uix.codeinput.html
