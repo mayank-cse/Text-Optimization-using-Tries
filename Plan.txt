@@ -1,0 +1,32 @@
+There will be 2 major classes with hierarchies.
+
+1. The content hierarchy 
+	This will contain the locational data of the text.
+	- Beginning
+	- Ending
+	- Location in terms in line number and alphabet number
+
+	Classes :
+		FullText : Will represent the whole document.
+		   |
+		   -----> Sentence :  Will represent a single sentence of the document.
+		   	     |
+			     -----> Word :  Will represent the entire word.
+	
+2. The trie hierarchy
+	This will contain the hierarchial data of each word.
+	- Level
+	- isEnding
+	->> The ending alphabet node will keep a vector of address of the Words that end at that Node.
+	->> Each alphabet will not have a pre-defined hash-map to get store the following alphabet to minime memory usage.
+
+	Classes :
+		Trie  : Obviously, the main tree structure.
+		  |
+		  -----> Alphabet : Will represent a single alphabet.
+
+3. The Document
+	This will serve as the main API to the entire system.
+	- Content 
+	- Trie
+	The program will interact with this one object and carry out it's operations.
